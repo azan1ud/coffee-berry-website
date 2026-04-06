@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Berry | Barnsbury's Hidden Gem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        linen: '#F9F6F0', forest: '#3A4739',
+                        sage: { light: '#C2CDB4', DEFAULT: '#A3B18A', dark: '#588157' },
+                        berry: { light: '#9E5B76', DEFAULT: '#7D3C55', dark: '#542437' },
+                        kraft: '#EAE4D3', ink: '#2A2C2A'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"DM Sans"', 'sans-serif'],
+                        hand: ['"Caveat"', 'cursive'],
+                    },
+                    animation: { 'float': 'float 6s ease-in-out infinite' },
+                    keyframes: { float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } } }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #F9F6F0; color: #2A2C2A; overflow-x: hidden; }
+        body::before {
+            content: ""; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none; z-index: 100;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+            opacity: 0.8;
+        }
+        .mask-arch { border-top-left-radius: 999px; border-top-right-radius: 999px; }
+        .dot-leader { flex: 1; border-bottom: 2px dotted #C2CDB4; margin: 0 12px; position: relative; top: -6px; opacity: 0.6; }
+        .watercolor-stain { position: absolute; background: radial-gradient(circle, rgba(163,177,138,0.15) 0%, rgba(249,246,240,0) 70%); border-radius: 50%; z-index: -1; filter: blur(20px); }
+        ::selection { background: #A3B18A; color: #F9F6F0; }
+        .organic-shape { clip-path: polygon(41% 0%, 82% 12%, 100% 43%, 89% 82%, 53% 100%, 15% 91%, 0% 59%, 13% 18%); }
+    </style>
+</head>
+<body class="font-sans antialiased relative">
+
+    <div class="watercolor-stain w-[600px] h-[600px] top-[-100px] left-[-200px]"></div>
+    <div class="watercolor-stain w-[800px] h-[800px] top-[40%] right-[-300px] opacity-60"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-linen/80 backdrop-blur-md border-b border-sage-light/30">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <i class="ph ph-plant text-berry text-2xl group-hover:rotate-12 transition-transform"></i>
+                <span class="font-serif text-2xl font-semibold tracking-tight text-forest">Coffee Berry</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 font-sans text-sm uppercase tracking-widest text-forest/80 font-medium">
+                <a href="#about" class="hover:text-berry transition-colors">Our Story</a>
+                <a href="#cakes" class="hover:text-berry transition-colors">The Cakes</a>
+                <a href="#menu" class="hover:text-berry transition-colors">Menu</a>
+                <a href="#visit" class="hover:text-berry transition-colors">Visit Anne</a>
+            </div>
+            <a href="#visit" class="hidden md:inline-flex items-center gap-2 px-6 py-2.5 bg-sage text-linen font-medium rounded-full hover:bg-sage-dark transition-all shadow-sm">Order a Cake</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="relative pt-32 pb-24 md:pt-48 md:pb-32 max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            <div class="lg:col-span-6 flex flex-col items-start z-10 relative">
+                <div class="absolute -top-12 -left-8 text-berry opacity-10 font-serif text-9xl pointer-events-none hidden lg:block italic">Berry</div>
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sage-light/20 border border-sage-light/50 text-sage-dark text-sm font-medium mb-6">
+                    <i class="ph ph-map-pin-line"></i> Barnsbury, Islington
+                </div>
+                <h1 class="font-serif text-6xl md:text-7xl lg:text-8xl leading-[0.9] text-forest mb-4">
+                    Coffee <br><span class="text-berry italic font-light">Berry</span>
+                </h1>
+                <p class="font-hand text-3xl md:text-4xl text-forest/80 mb-8 transform -rotate-2">Family-run coffee shop with a Vietnamese twist.</p>
+                <p class="font-sans text-lg text-ink/70 max-w-md mb-10 leading-relaxed">A tiny, charming neighbourhood gem where the coffee is smooth, the facade is covered in ivy, and Anne hand-bakes the most incredible cakes in London.</p>
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#visit" class="px-8 py-3.5 bg-forest text-linen font-medium rounded-full hover:bg-ink transition-all shadow-[0_8px_20px_rgba(58,71,57,0.2)]">Visit Us</a>
+                    <a href="#cakes" class="px-8 py-3.5 bg-transparent text-berry border border-berry font-medium rounded-full hover:bg-berry hover:text-linen transition-all">View The Cakes</a>
+                </div>
+                <div class="flex items-center gap-6 pt-6 text-sm font-semibold text-neutral-500 uppercase tracking-wide">
+                    <span class="flex items-center gap-2"><i class="ph-fill ph-check-circle text-sage-dark text-lg"></i> Eat In</span>
+                    <span class="flex items-center gap-2"><i class="ph-fill ph-takeout text-sage-dark text-lg"></i> Take Away</span>
+                </div>
+            </div>
+            <div class="lg:col-span-6 relative h-[500px] md:h-[650px] w-full mt-10 lg:mt-0">
+                <div class="absolute right-0 top-0 w-[85%] h-[80%] rounded-[2rem] overflow-hidden shadow-2xl shadow-forest/10 z-10 transform lg:rotate-1 hover:rotate-0 transition-transform duration-700">
+                    <img src="https://images.unsplash.com/photo-1521017430205-c252431f137e?auto=format&fit=crop&w=1200&q=80" alt="Cozy ivy-covered cafe exterior" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute left-0 bottom-10 w-2/3 h-[50%] rounded-[2rem] overflow-hidden shadow-xl z-20 transform -rotate-3 border-4 border-linen animate-float">
+                    <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=800&q=80" alt="Beautiful hand-baked cake" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute top-[10%] left-[-5%] lg:left-[5%] z-30 bg-[#FCD34D] text-forest rounded-full w-32 h-32 flex flex-col items-center justify-center shadow-lg transform -rotate-12 border-2 border-linen">
+                    <div class="flex gap-1 text-berry mb-1"><i class="ph-fill ph-star text-sm"></i><i class="ph-fill ph-star text-sm"></i><i class="ph-fill ph-star text-sm"></i><i class="ph-fill ph-star text-sm"></i><i class="ph-fill ph-star text-sm"></i></div>
+                    <span class="font-serif font-bold text-3xl leading-none">4.9</span>
+                    <span class="font-sans text-[10px] font-bold uppercase tracking-wider text-forest/80 mt-1 text-center">178 Google<br>Reviews</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 bg-sage-light/10 border-y border-sage-light/30">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-16 items-center">
+            <div class="w-full md:w-1/2 relative">
+                <div class="aspect-[4/5] mask-arch overflow-hidden shadow-xl relative group">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Warm cafe interior with natural light" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                </div>
+                <i class="ph-light ph-leaf absolute -bottom-8 -right-8 text-8xl text-sage transform -rotate-12 opacity-50"></i>
+            </div>
+            <div class="w-full md:w-1/2">
+                <h2 class="font-serif text-4xl md:text-5xl text-forest mb-6">The best things come in <span class="italic text-berry">small packages.</span></h2>
+                <div class="w-16 h-0.5 bg-sage mb-8"></div>
+                <div class="space-y-6 font-sans text-lg text-ink/80 leading-relaxed">
+                    <p>Coffee Berry is a compact, family-run cafe hidden on Barnsbury Road, Islington. Run by Anne with endless love and care, step inside and you'll find a warm welcome and an aroma you won't forget.</p>
+                    <p>We do things by hand. From freshly made sandwiches and our signature Vietnamese-inspired banh mi baguettes, to meticulously pulled smooth coffee and fresh juices.</p>
+                    <p class="font-hand text-2xl text-forest pt-4 pb-2">"Our tiny shop may be small, but every regular knows why they keep coming back."</p>
+                    <div class="flex items-center gap-4 mt-8 pt-6 border-t border-sage-light/40">
+                        <div class="w-12 h-12 rounded-full bg-berry/10 flex items-center justify-center text-berry border border-berry/20"><i class="ph ph-heart text-2xl"></i></div>
+                        <div><p class="font-bold text-forest">Run by Anne</p><p class="text-sm text-ink/60">With love for Islington.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE CAKES -->
+    <section id="cakes" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <i class="ph-light ph-flower-lotus text-sage text-4xl mb-4"></i>
+                <h2 class="font-serif text-5xl md:text-6xl text-forest mb-4">The Legendary Cakes</h2>
+                <p class="font-hand text-3xl text-berry -rotate-2">Hand-baked by Anne, loved by Islington.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group flex flex-col gap-4 transform md:translate-y-8">
+                    <div class="relative aspect-square overflow-hidden rounded-[2rem] border-8 border-kraft shadow-md">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Chocolate cake with fresh berries" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div><h3 class="font-serif text-2xl text-forest font-semibold">Chocolate & Fresh Berries</h3><p class="font-sans text-sm text-ink/60 mt-1">Rich, moist, decadent.</p></div>
+                </div>
+                <div class="group flex flex-col gap-4">
+                    <div class="relative aspect-[3/4] overflow-hidden rounded-[2rem] border-8 border-kraft shadow-md">
+                        <div class="absolute top-4 right-4 bg-linen px-3 py-1 rounded-full text-xs font-bold text-berry z-10 shadow-sm font-sans tracking-wide">BEST SELLER</div>
+                        <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=800&q=80" alt="Carrot cake with cream cheese frosting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="text-center"><h3 class="font-serif text-2xl text-forest font-semibold">Classic Carrot Cake</h3><p class="font-sans text-sm text-ink/60 mt-1">People travel across London for this.</p></div>
+                </div>
+                <div class="group flex flex-col gap-4 transform md:translate-y-16">
+                    <div class="relative aspect-square overflow-hidden rounded-[2rem] border-8 border-kraft shadow-md">
+                        <img src="https://images.unsplash.com/photo-1601325143329-373e351f0430?auto=format&fit=crop&w=800&q=80" alt="Homemade banana bread" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="text-right"><h3 class="font-serif text-2xl text-forest font-semibold">Warm Banana Bread</h3><p class="font-sans text-sm text-ink/60 mt-1">Perfect with a morning flat white.</p></div>
+                </div>
+            </div>
+            <!-- Custom Cakes Banner -->
+            <div class="mt-32 max-w-4xl mx-auto bg-sage text-linen rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+                <i class="ph-fill ph-plant absolute -right-10 -bottom-10 text-9xl text-sage-dark opacity-30 transform -rotate-12"></i>
+                <div class="relative z-10 max-w-lg">
+                    <h3 class="font-serif text-3xl md:text-4xl mb-3">Custom Cakes for Special Events</h3>
+                    <p class="font-sans text-linen/90">Red Velvet, Courgette Pistachio, Pumpkin Cake and more. Ann makes bespoke cakes to order for birthdays and gatherings.</p>
+                </div>
+                <a href="#visit" class="relative z-10 inline-flex items-center gap-2 bg-linen text-sage-dark px-8 py-4 rounded-full font-bold hover:bg-berry hover:text-linen transition-colors shadow-lg whitespace-nowrap">
+                    <i class="ph ph-phone-call"></i> Contact to Order
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="py-24 bg-kraft border-y-8 border-linen relative z-10 shadow-[inset_0_0_50px_rgba(0,0,0,0.05)]">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <i class="ph ph-coffee text-berry text-4xl mb-4"></i>
+                <h2 class="font-serif text-5xl md:text-6xl text-forest">The Board</h2>
+                <div class="w-24 h-[1px] bg-forest/30 mx-auto mt-6"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16 lg:px-12">
+                <!-- Baguettes & Sandwiches -->
+                <div>
+                    <h3 class="font-sans font-bold tracking-widest uppercase text-sage-dark mb-6 text-sm flex items-center gap-3">Baguettes & Sandwiches <span class="h-[1px] flex-1 bg-sage-light/50"></span></h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-baseline justify-between font-serif text-xl text-forest"><span>Ham & Cheese</span><span class="dot-leader"></span><span>&#163;5.85</span></li>
+                        <li class="flex items-baseline justify-between font-serif text-xl text-forest"><span>Tuna & Sweet Corn</span><span class="dot-leader"></span><span>&#163;5.85</span></li>
+                        <li class="flex items-baseline justify-between font-serif text-xl text-forest"><span>Chicken & Bacon Flat Bread</span><span class="dot-leader"></span><span>&#163;6.50</span></li>
+                        <li class="flex items-baseline justify-between font-serif text-xl text-forest"><span>Malted Grain Roast Chicken</span><span class="dot-leader"></span><span>&#163;6.50</span></li>
+                    </ul>
+                </div>
+                <!-- Banh Mi -->
+                <div class="relative">
+                    <div class="absolute -top-10 -right-6 md:-right-12 bg-berry text-linen font-hand text-xl px-4 py-2 rounded-lg transform rotate-6 shadow-md z-10 whitespace-nowrap">Ready in 30 mins!</div>
+                    <h3 class="font-sans font-bold tracking-widest uppercase text-berry mb-2 text-sm flex items-center gap-3">Banh Mi Baguettes <span class="h-[1px] flex-1 bg-berry/30"></span></h3>
+                    <p class="font-hand text-forest/70 mb-6 font-medium">The Vietnamese Twist &bull; Pre-order</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-baseline justify-between font-serif text-xl text-forest group"><span class="group-hover:text-berry transition-colors">Chicken Ga</span><span class="dot-leader"></span><span>&#163;8.85</span></li>
+                        <li class="flex items-baseline justify-between font-serif text-xl text-forest group"><span class="group-hover:text-berry transition-colors">Chicken Ga Satay</span><span class="dot-leader"></span><span>&#163;8.85</span></li>
+                        <li class="flex items-baseline justify-between font-serif text-xl text-forest group"><span class="group-hover:text-berry transition-colors">Crispy Pork</span><span class="dot-leader"></span><span>&#163;8.85</span></li>
+                        <li class="flex items-baseline justify-between font-serif text-xl text-forest group"><span class="group-hover:text-berry transition-colors">BBQ Pork</span><span class="dot-leader"></span><span>&#163;8.85</span></li>
+                        <li class="flex items-baseline justify-between font-serif text-xl text-forest group"><span class="group-hover:text-berry transition-colors">Tofu Vegan</span><span class="dot-leader"></span><span>&#163;9.00</span></li>
+                    </ul>
+                </div>
+                <!-- Smoothies -->
+                <div>
+                    <h3 class="font-sans font-bold tracking-widest uppercase text-sage-dark mb-6 text-sm flex items-center gap-3">Fresh Smoothies <span class="h-[1px] flex-1 bg-sage-light/50"></span></h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-baseline justify-between font-serif text-xl text-forest"><span>Mango</span><span class="dot-leader"></span><span>&#163;5.00</span></li>
+                        <li class="flex items-baseline justify-between font-serif text-xl text-forest"><span>Pineapple</span><span class="dot-leader"></span><span>&#163;5.00</span></li>
+                        <li class="flex items-baseline justify-between font-serif text-xl text-forest"><span>Strawberry</span><span class="dot-leader"></span><span>&#163;5.00</span></li>
+                        <li class="flex items-baseline justify-between font-serif text-xl text-forest"><span>Mixed Berries</span><span class="dot-leader"></span><span>&#163;5.00</span></li>
+                    </ul>
+                </div>
+                <!-- Plus -->
+                <div class="flex items-center justify-center bg-linen/50 rounded-2xl p-6 border border-sage-light/40">
+                    <p class="font-serif text-xl text-center text-forest italic">Plus: Smooth Coffee, Specialty Teas, Fresh Juices & A Daily Selection of Pastries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="py-24 md:py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-16 flex flex-col md:flex-row justify-between items-baseline gap-6 border-b border-sage-light/30 pb-6">
+            <div><h2 class="font-serif text-4xl text-forest">Word on the Street</h2><p class="font-sans text-ink/60 mt-2">178 local voices</p></div>
+            <div class="flex items-center gap-2">
+                <span class="font-serif text-3xl font-bold text-forest">4.9</span>
+                <div class="flex text-berry text-lg"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-sage-light/20 transform rotate-1 hover:-translate-y-2 transition-transform duration-300 relative">
+                <i class="ph-fill ph-quotes text-sage/30 text-5xl absolute top-6 right-6"></i>
+                <div class="flex text-[#FCD34D] mb-4 text-sm"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                <p class="font-sans text-ink/80 text-base leading-relaxed mb-6 font-medium">"The cakes are absolutely delicious. Highly recommend the courgette pistachio and the pumpkin."</p>
+                <p class="font-hand text-xl text-forest font-bold">&mdash; Stephanie Barrett</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-sage-light/20 transform -rotate-2 hover:-translate-y-2 transition-transform duration-300 relative lg:mt-8">
+                <i class="ph-fill ph-quotes text-sage/30 text-5xl absolute top-6 right-6"></i>
+                <div class="flex text-[#FCD34D] mb-4 text-sm"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                <p class="font-sans text-ink/80 text-base leading-relaxed mb-6 font-medium">"Ann makes the best homemade cakes I've ever tasted! So moist and delicious. She'll even make cakes for your events."</p>
+                <p class="font-hand text-xl text-forest font-bold">&mdash; Local Resident</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-sage-light/20 transform rotate-1 hover:-translate-y-2 transition-transform duration-300 relative lg:-mt-4">
+                <i class="ph-fill ph-quotes text-sage/30 text-5xl absolute top-6 right-6"></i>
+                <div class="flex text-[#FCD34D] mb-4 text-sm"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                <p class="font-sans text-ink/80 text-base leading-relaxed mb-6 font-medium">"Lovely little shop. Wonderful cakes and good coffee. The owner is great too."</p>
+                <p class="font-hand text-xl text-forest font-bold">&mdash; M S</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-sage-light/20 transform rotate-2 hover:-translate-y-2 transition-transform duration-300 relative lg:mt-12">
+                <i class="ph-fill ph-quotes text-sage/30 text-5xl absolute top-6 right-6"></i>
+                <div class="flex text-[#FCD34D] mb-4 text-sm"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                <p class="font-sans text-ink/80 text-base leading-relaxed mb-6 font-medium">"A warm welcome and nice coffee and lovely cakes!! Ann makes the most amazing cakes to order."</p>
+                <p class="font-hand text-xl text-forest font-bold">&mdash; Nigel Niles</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / VISIT US -->
+    <footer id="visit" class="bg-forest text-linen relative overflow-hidden pt-24 pb-12 rounded-t-[3rem] mt-12">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mb-20">
+                <div class="space-y-6">
+                    <h2 class="font-serif text-5xl">Coffee Berry</h2>
+                    <p class="font-sans text-linen/70 leading-relaxed text-lg flex items-start gap-3">
+                        <i class="ph-fill ph-map-pin text-sage mt-1"></i>
+                        <span>3A Barnsbury Rd,<br>Berners House,<br>London N1 0HG</span>
+                    </p>
+                </div>
+                <div class="space-y-6 lg:pl-10">
+                    <h3 class="font-sans uppercase tracking-widest text-sm text-sage font-bold">Opening Hours</h3>
+                    <ul class="space-y-3 font-serif text-xl border-l-2 border-sage/20 pl-6">
+                        <li class="flex justify-between w-48"><span class="text-linen/70">Mon - Fri</span><span>7am - 4pm</span></li>
+                        <li class="flex justify-between w-48"><span class="text-linen/70">Saturday</span><span>8am - 4pm</span></li>
+                        <li class="flex justify-between w-48 text-berry-light italic"><span>Sunday</span><span>Closed</span></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="font-sans uppercase tracking-widest text-sm text-sage font-bold">Say Hello</h3>
+                    <a href="tel:07908437343" class="flex items-center gap-3 font-serif text-2xl hover:text-sage transition-colors group">
+                        <div class="w-10 h-10 rounded-full bg-linen/10 flex items-center justify-center group-hover:bg-sage"><i class="ph-fill ph-phone"></i></div>
+                        07908 437343
+                    </a>
+                    <a href="https://instagram.com/coffeeberrybarnsbury" target="_blank" class="flex items-center gap-3 font-sans text-lg hover:text-sage transition-colors group pt-2">
+                        <div class="w-10 h-10 rounded-full bg-linen/10 flex items-center justify-center group-hover:bg-sage"><i class="ph-fill ph-instagram-logo"></i></div>
+                        @coffeeberrybarnsbury
+                    </a>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-linen/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-sans text-linen/40">
+                <p>&copy; 2026 Coffee Berry Barnsbury. All rights reserved.</p>
+                <p class="flex items-center gap-1">Hand-crafted by Anne <i class="ph-fill ph-heart text-berry-light"></i></p>
+            </div>
+        </div>
+        <i class="ph-fill ph-leaf absolute -bottom-20 -right-20 text-[300px] text-sage-dark/10 transform rotate-45 pointer-events-none"></i>
+    </footer>
+
+</body>
+</html>
